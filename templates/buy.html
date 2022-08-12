@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% include 'includes/_messages.html' %}
+<h4>Your current balance is <mark style = "background-color:yellow">{{ balance }} CR7</mark></h4>
+{% from "includes/_formhelpers.html" import render_field %}
+<form action="" method="POST">
+  <br>
+  <div class="form-group">
+      {{render_field(form.amount, class_="form-control")}}
+    </div>
+  <button type="submit" class="btn btn-primary">Buy Now</button>
+</form>
+{% endblock %}
